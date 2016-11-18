@@ -6873,6 +6873,7 @@ select:focus:invalid:focus {
 
 .navbar .brand {
   text-shadow: 0 1px 0 black;
+  color: midnightblue;
 }
 
 .navbar .divider-vertical {
