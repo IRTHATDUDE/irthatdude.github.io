@@ -6881,7 +6881,7 @@ select:focus:invalid:focus {
 }
 
 .navbar-inverse .brand {
-  color: #555;
+  color: black;
   text-shadow: 0 1px 0 white;
 }
 .navbar-inverse .brand:hover {
