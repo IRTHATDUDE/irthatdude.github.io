@@ -1,0 +1,95 @@
+<!--
+                                                                                                                   
+                                                                                                               
+LLLLLLLLLLL                              kkkkkkkk           kkkkkkkk             iiii  NNNNNNNN        NNNNNNNN
+L:::::::::L                              k::::::k           k::::::k            i::::i N:::::::N       N::::::N
+L:::::::::L                              k::::::k           k::::::k             iiii  N::::::::N      N::::::N
+LL:::::::LL                              k::::::k           k::::::k                   N:::::::::N     N::::::N
+  L:::::L                  ooooooooooo    k:::::k    kkkkkkk k:::::k    kkkkkkkiiiiiii N::::::::::N    N::::::N
+  L:::::L                oo:::::::::::oo  k:::::k   k:::::k  k:::::k   k:::::k i:::::i N:::::::::::N   N::::::N
+  L:::::L               o:::::::::::::::o k:::::k  k:::::k   k:::::k  k:::::k   i::::i N:::::::N::::N  N::::::N
+  L:::::L               o:::::ooooo:::::o k:::::k k:::::k    k:::::k k:::::k    i::::i N::::::N N::::N N::::::N
+  L:::::L               o::::o     o::::o k::::::k:::::k     k::::::k:::::k     i::::i N::::::N  N::::N:::::::N
+  L:::::L               o::::o     o::::o k:::::::::::k      k:::::::::::k      i::::i N::::::N   N:::::::::::N
+  L:::::L               o::::o     o::::o k:::::::::::k      k:::::::::::k      i::::i N::::::N    N::::::::::N
+  L:::::L         LLLLLLo::::o     o::::o k::::::k:::::k     k::::::k:::::k     i::::i N::::::N     N:::::::::N
+LL:::::::LLLLLLLLL:::::Lo:::::ooooo:::::ok::::::k k:::::k   k::::::k k:::::k   i::::::iN::::::N      N::::::::N
+L::::::::::::::::::::::Lo:::::::::::::::ok::::::k  k:::::k  k::::::k  k:::::k  i::::::iN::::::N       N:::::::N
+L::::::::::::::::::::::L oo:::::::::::oo k::::::k   k:::::k k::::::k   k:::::k i::::::iN::::::N        N::::::N
+LLLLLLLLLLLLLLLLLLLLLLLL   ooooooooooo   kkkkkkkk    kkkkkkkkkkkkkkk    kkkkkkkiiiiiiiiNNNNNNNN         NNNNNNN
+                                                                                                               
+                                                                                                               
+                                                                                                               
+--> 
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>I R LokkiN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="custom.css">
+  <link rel="shortcut icon" href="https://66.media.tumblr.com/e63a6b8627e82aea2bdbbfa2d927af91/tumblr_n3ko88mnyt1s4vgzro1_500.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+html, body {
+    background:#777;
+    margin:0;
+}
+#snow {
+    position:fixed;
+    background:#777;
+}
+
+</style>
+
+<body>
+<canvas id="snow"></canvas>
+
+<script>
+var canvas = document.getElementById('snow'),
+    ctx = canvas.getContext('2d');
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.onresize = resize;
+
+function noise(ctx) {
+    
+    var w = ctx.canvas.width,
+        h = ctx.canvas.height,
+        idata = ctx.createImageData(w, h),
+        buffer32 = new Uint32Array(idata.data.buffer),
+        len = buffer32.length,
+        i = 0;
+
+    for(; i < len;)
+        buffer32[i++] = ((255 * Math.random())|0) << 24;
+    
+    ctx.putImageData(idata, 0, 0);
+}
+
+var toggle = true;
+
+// added toggle to get 30 FPS instead of 60 FPS
+(function loop() {
+    toggle = !toggle;
+    if (toggle) {
+        requestAnimationFrame(loop);
+        return;
+    }
+    noise(ctx);
+    requestAnimationFrame(loop);
+})();
+
+</script>
+</body>
+</html>
