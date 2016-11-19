@@ -70,7 +70,12 @@ body, html {
   background-image: url("http://wallup.net/wp-content/uploads/2016/01/269658-nature-mist-landscape-sunrise-trees-river-clouds-sky-boat-reflection-atmosphere-fisherman-grass-water.jpg");
   min-height: 65%;
 }
-
+@media screen and (max-width: 500px) {
+/* applies only if the screen is narrower than 500px */
+  header, body, nav, footer, bgimg-1, bgimg-2, bgimg-3, bgimg-4 {
+    position: static
+  }
+}
 
 .caption {
   position: absolute;
