@@ -258,10 +258,10 @@ function init()
 			function OnDraw()
 			{
 				time = time + 0.577;
-				var canvas = document.getElementById("mycanvas");
+				var canvas = document.getElementsById("mycanvas");
 				var dataLine = canvas.getContext("2d");
 			    var value = document.getElementById("lineWidth");
-				var randomcolor = 'mycanvas'+Math.floor(Math.random()*16777215).toString(16);
+				var randomcolor = '#'+Math.floor(Math.random()*16777215).toString(16);
 				this.style.color = randomcolor;
 				dataLine.clearRect(0, 0, canvas.width, canvas.height);
 				
