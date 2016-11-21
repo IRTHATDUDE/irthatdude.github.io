@@ -261,7 +261,9 @@ function init()
 				var canvas = document.getElementsById("mycanvas");
 				var dataLine = canvas.getContext("2d");
 			    var value = document.getElementById("lineWidth");
+				
 				dataLine.clearRect(0, 0, canvas.width, canvas.height);
+				
 				dataLine.beginPath();
 				<!-- dataLine.moveTo(0, canvas.height * 0.5); -->
 				for(cnt = -1; cnt <= canvas.width; cnt++)
