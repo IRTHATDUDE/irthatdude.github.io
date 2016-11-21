@@ -253,7 +253,7 @@ function init()
 			}
 
             var time = 0;
-			//var color = "#78B68A";
+			var color = '#'+Math.floor(Math.random()*16777215).toString(16);
 			
 			function OnDraw()
 			{
@@ -261,10 +261,7 @@ function init()
 				var canvas = document.getElementsById("mycanvas");
 				var dataLine = canvas.getContext("2d");
 			    var value = document.getElementById("lineWidth");
-				var randomcolor = '#'+Math.floor(Math.random()*16777215).toString(16);
-				this.style.color = randomcolor;
 				dataLine.clearRect(0, 0, canvas.width, canvas.height);
-				
 				dataLine.beginPath();
 				<!-- dataLine.moveTo(0, canvas.height * 0.5); -->
 				for(cnt = -1; cnt <= canvas.width; cnt++)
@@ -282,10 +279,10 @@ function init()
 				color = "black";
 			}
 			
-			//function leaveColor()
-			//{
-			//	color = "#78B68A";
-          //  }
+			function leaveColor()
+			{
+				color = '#'+Math.floor(Math.random()*16777215).toString(16);
+         }
 
 init();</script>
 	<script>
