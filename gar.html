@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>I R LokkiN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="custom.css">
+  <link rel="shortcut icon" href="https://66.media.tumblr.com/e63a6b8627e82aea2bdbbfa2d927af91/tumblr_n3ko88mnyt1s4vgzro1_500.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  min-width: 100%;
+}
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("http://www.thecareshop.com/img/previews/slide-bg.jpg");
+  min-height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+/* applies only if the screen is narrower than 500px */
+  header, body, nav, footer, bgimg-1, bgimg-2, bgimg-3, bgimg-4 {
+    position: static
+  }
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  
+}
+.caption span.border {
+  background-color: transparent;
+  color: black;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+body,h1 {font-family: "Raleway", sans-serif}
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 50px "Lato", sans-serif;
+  color: #111;
+}
+  .icon-bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background-color: midnightblue;
+  border-radius: 1px;
+}
+.inactiveLink {
+   pointer-events: none;
+   cursor: default;
+}
+	.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('Firefox_wallpaper.png') center center / cover no-repeat;
+  }
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar navbar navbar-fixed-top" style="font-size: 20px">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.patreon.com/lokkin" target="_blank" title="Support my dreams" data-toggle="popover" data-trigger="hover">Donate</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="http://www.paisho.net" title="KorraCraft ~ PaiSho Addition" data-toggle="popover" data-trigger="hover">PaiSho</a></li>
+        <li><a href="https://www.facebook.com/nicolaes.clarke" target="_blank" title="Add me on FaceBook" data-toggle="popover" data-trigger="hover">FaceBook</a></li>
+        <li><a href="https://www.github.com/irthatdude" target="_blank" title="Like Codes?" data-toggle="popover" data-trigger="hover">Github</a></li>
+        <li><a href="irthatdude.github.io/matrix.html" target="_blank" title="Is it I who you seek?" data-toggle="popover" data-trigger="hover">Matrix</a></li>
+        <li><a href="irthatdude.github.io/snow.html" target="_blank" title="THEIR HERE!!!" data-toggle="popover" data-trigger="hover">Snow</a></li>
+
+	    </ul> 
+      
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    </header>
+	<!--    <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+            <source src="snowfall.mp4" type="video/mp4"> Nah fam
+        </video>
+    </div>-->
+
+<div class="bgimg-1">
+  <div class="caption">
+    <h1><span class="border" style="font-size:65px; text-shadow: 2px 2px #84663f; color: black;"><strong>Gear Auto Repair</strong></span></h1>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Gear Auto Repair is an all around workshop.</h3>
+  <p style="text-align:center;">Getting Back in gear is our specialty</p>
+</div>
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+
+
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+<footer>
+  <center  style="background-color:transparent;">
+      <img src="http://i.imgur.com/qYqsoDE.png" alt="btc" style="width:64px; height:64px">
+  
+   <p class="w3-medium">
+  Powered by <a href="http://www.paisho.net" target="_blank">N<span class="glyphicon glyphicon-record"></span>T LokkiN</a>
+  </p>
+</center>
+  </footer>
+  <!-- Latest compiled and minified JavaScript -->
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
 
