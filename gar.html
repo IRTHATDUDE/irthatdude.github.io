@@ -195,7 +195,36 @@ h3 {
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>	 $(document).ready(function(e) {
 
+        if(navigator.userAgent.match(/Android/i)
+          || navigator.userAgent.match(/webOS/i)
+          || navigator.userAgent.match(/iPhone/i)
+          || navigator.userAgent.match(/iPad/i)
+          || navigator.userAgent.match(/iPod/i)
+          || navigator.userAgent.match(/BlackBerry/i)
+          || navigator.userAgent.match(/Windows Phone/i)) {
+
+         //write code for your mobile clients here.
+
+          var jsScript = document.createElement("script");
+          jsScript.setAttribute("type", "text/javascript");
+          jsScript.setAttribute("src", "js/alternate_js_file.js");
+          document.getElementsByTagName("head")[0].appendChild(jsScript );
+
+          var cssScript = document.createElement("link");
+          cssScript.setAttribute("rel", "stylesheet");
+          cssScript.setAttribute("type", "text/css");
+          cssScript.setAttribute("href", "css/alternate_css_file.css");
+          document.getElementsByTagName("head")[0].appendChild(cssScript); 
+
+    }
+    else{
+         // write code for your desktop clients here
+    }
+
+    });
+	</script>
 
 
 </body>
